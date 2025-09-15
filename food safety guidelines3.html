@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Safety Guidelines</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            width: 100%;
+            border: 0;
+            background-color: rgba(236, 202, 156, 0.5);
+            min-height: 100vh; /* Ensure the body covers the entire viewport height */
+        }
+
+        .sidebar {
+            background-color: #DBA979;
+            width: 370px;
+            text-align: center;
+            height: 210vh; /* Adjust height as needed */
+            padding: 10px;
+            box-shadow: 0 0 10px black;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .sidebar-inner {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            animation: scroll-container 15s linear infinite;
+        }
+
+        .sidebar-inner img {
+            padding: 5px;
+            width: 100%;
+        }
+
+        @keyframes scroll-container {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-50%);
+            }
+        }
+
+        .container {
+            display: flex;
+            flex: 1; /* Make container stretch to fill remaining height */
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 15px;
+            padding-top: 70px;
+        }
+
+        .container1 h1,
+        h2 {
+            text-align: center;
+            border-bottom: 3px solid black;
+        }
+
+        .container1 h1 {
+            border-bottom: 4px solid black;
+        }
+
+        .content {
+            font-size: 28px;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #b86619;
+        }
+
+        h2 {
+            font-size: 40px;
+            color: #b86619;
+        }
+
+        #li-content {
+            color: #b86619;
+            font-size: 35px;
+        }
+
+        ul {
+            font-size: 30px;
+        }
+
+        footer {
+            background-color: #DBA979;
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+            width: 100%;
+            margin-top: auto; /* Push footer to the bottom */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-inner">
+                <img src="images/pic-12.jpg" alt="pic-12" height="300" width="300">
+                <img src="images/pic-13.jpg" alt="pic-13" height="300" width="300">
+                <img src="images/pic-14.png" alt="pic-14" height="300" width="300">
+                <img src="images/pic-15.jpg" alt="pic-15" height="300" width="300">
+                <img src="images/pic-16.jpg" alt="pic-16" height="300" width="300">
+                <img src="images/pic-12.jpg" alt="pic-12" height="300" width="300">
+                <img src="images/pic-13.jpg" alt="pic-13" height="300" width="300">
+                <img src="images/pic-14.png" alt="pic-14" height="300" width="300">
+                <img src="images/pic-15.jpg" alt="pic-15" height="300" width="300">
+                <img src="images/pic-16.jpg" alt="pic-16" height="300" width="300">
+            </div>
+        </aside>
+        <div class="main-content">
+            <div class="container1">
+                <h1>FOOD SAFETY GUIDELINES</h1><br>
+                <h2>For Business</h2><br>
+                <ol class="content">
+                    <li id="li-content">Food Safety Management System</li><br>
+                    <ul>
+                        <li>Implement a HACCP (Hazard Analysis Critical Control Points) plan.</li>
+                        <li>Regularly review and update the food safety management system.</li>
+                        <li>Train staff on food safety policies and procedures.</li>
+                    </ul><br><br>
+                    <li id="li-content">Facility Cleanliness</li><br>
+                    <ul>
+                        <li>Maintain high standards of cleanliness in all areas.</li>
+                        <li>Schedule regular deep cleaning and pest control services.</li>
+                        <li>Ensure waste is properly disposed of and not accumulating.</li>
+                    </ul><br><br>
+                    <li id="li-content">Equipment Maintenance</li><br>
+                    <ul>
+                        <li>Regularly inspect and maintain all equipment.</li>
+                        <li>Keep records of maintenance and repairs.</li>
+                        <li>Calibrate thermometers and other measuring devices regularly.</li>
+                    </ul><br><br>
+                    <li id="li-content">Staff Training</li><br>
+                    <ul>
+                        <li>Provide ongoing food safety training for all employees.</li>
+                        <li>Ensure new employees are trained before handling food.</li>
+                        <li>Keep training records and certifications up to date.</li>
+                    </ul><br><br>
+                    <li id="li-content">Compliance and Audits</li><br>
+                    <ul>
+                        <li>Stay informed about local, national, and international food safety regulations.</li>
+                        <li>Prepare for and conduct regular internal and external audits.</li>
+                        <li>Address any non-compliance issues promptly and effectively.</li>
+                    </ul><br><br>
+                    <li id="li-content">Customer Communication</li><br>
+                    <ul>
+                        <li>Clearly display food safety certifications and inspection results.</li>
+                        <li>Provide information on allergen management and ingredient sourcing.</li>
+                        <li>Handle customer complaints and feedback regarding food safety promptly.</li>
+                    </ul><br>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Food Safety Portal. All Rights Reserved.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Safety Guidelines</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            width: 100%;
+            border: 0;
+            background-color: rgba(236, 202, 156, 0.5);
+            min-height: 100vh; /* Ensure the body covers the entire viewport height */
+        }
+
+        .sidebar {
+            background-color: #DBA979;
+            width: 370px;
+            text-align: center;
+            height: 215vh; /* Adjust height as needed */
+            padding: 20px;
+            box-shadow: 0 0 10px black;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .sidebar-inner {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            animation: scroll-container 15s linear infinite;
+        }
+
+        .sidebar-inner img {
+            padding: 5px;
+            width: 100%;
+        }
+
+        @keyframes scroll-container {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-40%);
+            }
+        }
+
+        .container {
+            display: flex;
+            flex: 1; /* Make container stretch to fill remaining height */
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 28px;
+            padding-top: 70px;
+        }
+
+        .container1 h1,
+        h2 {
+            text-align: center;
+            border-bottom: 3px solid black;
+        }
+
+        .container1 h1 {
+            border-bottom: 4px solid black;
+        }
+
+        .content {
+            font-size: 28px;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #b86619;
+        }
+
+        h2 {
+            font-size: 40px;
+            color: #b86619;
+        }
+
+        #content-id {
+            color: #b86619;
+            font-size: 35px;
+        }
+
+        ul {
+            font-size: 30px;
+        }
+
+        footer {
+            background-color: #DBA979;
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+            width: 100%;
+            margin-top: auto; /* Push footer to the bottom */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-inner">
+                <img src="images/pic-2.jpg" alt="pic-2">
+                <img src="images/pic-3.jpg" alt="pic-3">
+                <img src="images/pic-4.jpg" alt="pic-4">
+                <img src="images/pic-5.jpg" alt="pic-5">
+                <img src="images/pic-6.jpg" alt="pic-6">
+                <img src="images/pic-2.jpg" alt="pic-2">
+                <img src="images/pic-3.jpg" alt="pic-3">
+                <img src="images/pic-4.jpg" alt="pic-4">
+                <img src="images/pic-5.jpg" alt="pic-5">
+                <img src="images/pic-6.jpg" alt="pic-6">
+            </div>
+        </aside>
+        <div class="main-content">
+            <div class="container1">
+                <h1>FOOD SAFETY GUIDELINES</h1><br><br>
+                <h2>For Consumers</h2><br>
+                <ol class="content">
+                    <li id="content-id">Purchasing Food</li><br>
+                    <ul>
+                        <li>Check expiration dates and condition of packaging.</li>
+                        <li>Avoid buying damaged or bulging cans.</li>
+                        <li>Purchase perishable items last and keep them cold on the way home.</li>
+                    </ul><br><br>
+                    <li id="content-id">Storing Food</li><br>
+                    <ul>
+                        <li>Refrigerate perishable food within 2 hours.</li>
+                        <li>Keep refrigerator at or below 40°F (4°C) and freezer at 0°F (-18°C).</li>
+                        <li>Store raw meat, poultry, and seafood separately from ready-to-eat foods.</li>
+                    </ul><br><br>
+                    <li id="content-id">Preparing Food</li><br>
+                    <ul>
+                        <li>Wash hands with soap and water for at least 20 seconds before and after handling food.</li>
+                        <li>Use separate cutting boards for raw meat and vegetables.</li>
+                        <li>Wash fruits and vegetables under running water before eating or cooking.</li>
+                    </ul><br><br>
+                    <li id="content-id">Cooking Food</li><br>
+                    <ul>
+                        <li>Cook food to the right temperature: use a food thermometer.</li>
+                        <li>Reheat leftovers to at least 165°F (74°C).</li>
+                        <li>Follow cooking times and temperatures for different types of food.</li>
+                    </ul><br><br>
+                    <li id="content-id">Serving Food</li><br>
+                    <ul>
+                        <li>Keep hot food hot (140°F or above) and cold food cold (40°F or below).</li>
+                        <li>Use clean utensils and dishes to serve food.</li>
+                        <li>Avoid leaving perishable food out for more than 2 hours (1 hour if above 90°F).</li>
+                    </ul><br><br>
+                    <li id="content-id">Handling Leftovers</li><br>
+                    <ul>
+                        <li>Cool leftovers quickly and store them in shallow containers.</li>
+                        <li>Consume leftovers within 3-4 days or freeze them.</li>
+                        <li>Reheat leftovers to at least 165°F (74°C) before consuming.</li>
+                    </ul><br>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Food Safety Portal. All Rights Reserved.
+    </footer>
+</body>
+</html>

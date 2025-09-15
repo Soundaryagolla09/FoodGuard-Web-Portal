@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In / Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('img/6.avif');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); 
+            z-index: 1;
+        }
+
+        .form-container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.3); 
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 90%;
+            margin: 20px;
+            animation: fadeIn 1s ease-in-out;
+            color:white;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .tab {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab button {
+            background: none;
+            border: none;
+            font-size: 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            padding: 10px;
+            transition: color 0.3s;
+            color:white;
+        }
+
+        .tab button:hover {
+            color: #DBA979;
+        }
+
+        .tab button.active {
+            border-bottom: 2px solid #DBA979;
+            color: #DBA979;
+        }
+
+        .form {
+            display: none;
+            width: 100%;
+        }
+
+        .form.active {
+            display: block;
+        }
+
+        .form h2 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form .input-group {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .form .input-group input {
+            background-color: white;
+            padding: 10px 10px 10px 40px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .form .input-group i {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: #ccc;
+        }
+        a{
+            color:white;
+        }
+        .form .submit-btn {
+            background: linear-gradient(to right, #dba979, #c49365);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .form .submit-btn:hover {
+            background: linear-gradient(to right, #c49365, #dba979);
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 300px;
+            margin-top: 20px;
+        }
+
+        .social-login a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            width: 70px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .social-login a.facebook {
+            background-color: #3b5998;
+        }
+
+        .social-login a.facebook:hover {
+            background-color: #314e85;
+        }
+
+        .social-login a.twitter {
+            background-color: #1da1f2;
+        }
+
+        .social-login a.twitter:hover {
+            background-color: #1991db;
+        }
+
+        .social-login a.google {
+            background-color: #db4437;
+        }
+
+        .social-login a.google:hover {
+            background-color: #c33c2e;
+        }
+
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 20px;
+            }
+
+            .tab button {
+                font-size: 18px;
+            }
+
+            .form h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="tab">
+            <button class="tablink active" onclick="openForm(event, 'SignIn')">Sign In</button>
+            <button class="tablink" onclick="openForm(event, 'Register')">Register</button>
+        </div>
+        <div id="SignIn" class="form active">
+            <h2>Sign In</h2>
+            <form onsubmit="return validateForm('SignIn')">
+                <div class="input-group">
+                    <i class="fa fa-envelope"></i>
+                    <input type="text" placeholder="Email Id" id="signin-email">
+                </div>
+                <div class="input-group">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Password" id="signin-password">
+                </div>
+                <input type="submit" value="SUBMIT" class="submit-btn">
+            </form><br>
+            <a href="#">Forgot Password?</a>
+            <div class="social-login">
+                <a href="#" class="facebook">Facebook</a>
+                <a href="#" class="twitter">Twitter</a>
+                <a href="#" class="google">Google+</a>
+            </div>
+        </div>
+        <div id="Register" class="form">
+            <h2>Register Here</h2>
+            <form onsubmit="return validateForm('Register')">
+                <div class="input-group">
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="Enter Username" id="register-username">
+                </div>
+                <div class="input-group">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" placeholder="Enter email" id="register-email">
+                </div>
+                <div class="input-group">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Create password" id="register-password">
+                </div>
+                <div class="input-group">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Confirm password" id="register-confirm-password">
+                </div>
+                <input type="submit" value="Register" class="submit-btn">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openForm(evt, formName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("form");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(formName).style.display = "block";
+            document.getElementById(formName).classList.add("active");
+            evt.currentTarget.className += " active";
+        }
+
+        function validateForm(formName) {
+            if (formName === 'SignIn') {
+                var email = document.getElementById('signin-email').value;
+                var password = document.getElementById('signin-password').value;
+                if (email === '' || password === '') {
+                    alert('All fields must be filled out');
+                    return false;
+                }
+            } else if (formName === 'Register') {
+                var username = document.getElementById('register-username').value;
+                var email = document.getElementById('register-email').value;
+                var password = document.getElementById('register-password').value;
+                var confirmPassword = document.getElementById('register-confirm-password').value;
+                if (username === '' || email === '' || password === '' || confirmPassword === '') {
+                    alert('All fields must be filled out');
+                    return false;
+                }
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match');
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</body>
+</html>

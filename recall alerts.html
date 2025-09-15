@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recall Alerts</title>
+    <style>
+        body {
+            background-color: rgba(219, 169, 121,0.3);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+        .content{
+            padding-left: 30px;
+        }
+        .sidebar {
+            width: 25%;
+            background-color:#DBA979;
+            padding: 20px;
+            color: black;
+        }
+        .sidebar h2 {
+            color: black;
+            margin-bottom: 10px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+        .sidebar ul li a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            padding: 8px 16px;
+            transition: background-color 0.3s ease;
+        }
+        .sidebar ul li a:hover {
+            background-color:#efc299;
+            border-radius: 5px;
+        }
+        .sidebar .form-container {
+            margin-top: 50px;
+            padding: 20px 30px 20px 20px;
+            background-color: rgba(236, 202, 156,0.9);
+            border-radius: 10px;
+        }
+        label{
+            color:black;
+        }
+        .sidebar .form-container input[type="text"],
+        .sidebar .form-container input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .sidebar .form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(246, 201, 140, 0.3);
+            border: none;
+            border-radius: 5px;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .sidebar .contact-info {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(236, 202, 156,0.9);
+            border-radius: 5px;
+        }
+        .sidebar .contact-info h2 {
+            margin-bottom: 10px;
+        }
+        .sidebar .contact-info ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .sidebar .contact-info ul li {
+            margin-bottom: 8px;
+        }
+        .sidebar .twitter-updates {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(236, 202, 156,0.9);
+            border-radius: 10px;
+        }
+        .sidebar .twitter-updates h2 {
+            margin-bottom: 10px;
+        }
+        .sidebar .twitter-updates p {
+            margin: 0;
+        }
+        .sidebar .app-info {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(236, 202, 156,0.9);
+            border-radius: 5px;
+        }
+        h1,h3{
+            color:brown;
+        }
+        .content ul{
+            font-size: 17px;
+        }
+        footer {
+            background-color: #DBA979;
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>FOOD SAFETY</h2>
+            <ul>
+                <li><a href="#overview">Overview of Food Recalls</a></li>
+                <li><a href="#recent">Recent Recall Alerts</a></li>
+                <li><a href="#handling">How to Handle Recalls</a></li>
+                <li><a href="#regulatory">Regulatory Agencies</a></li>
+                <li><a href="#resources">Consumer Resources</a></li>
+            </ul>
+            <div class="twitter-updates">
+                <h2>TWITTER UPDATES</h2>
+                <p>Follow us for latest updates on food safety and recalls:</p>
+                <p><a href="https://twitter.com/foodsafety" target="_blank">Twitter</a></p>
+            </div>
+            <div class="form-container">
+                <h2>Sign Up for Recall Alerts</h2>
+                <form action="#" method="post">
+                    <label>Enter Name</label>
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <label>Enter Email</label>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="submit" value="Sign Up">
+                </form>
+            </div>
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <ul>
+                    <li>Email: <a href="#">info@foodsafetyportal.com</a></li>
+                    <li>Phone: <a href="#">1-800-FOODSAFE</a></li>
+                    <li>Address: <a href="#">123 Food Safety St, Cityvilla, Country</a></li>
+                </ul>
+            </div>
+            <div class="app-info">
+                <h2>App Information</h2>
+                    <ul>
+                        <li>Download App: <a href="https://play.google.com/store/apps/details?id=com.usfoodrecalls.android&pcampaignid=web_share">Food Recalls & Alerts</a></li>
+                    </ul>
+
+            </div>
+        </div>
+        <div class="content">
+            <h1 id="overview">Recall Alerts for Food Safety</h1>
+            <p>Recall alerts are notifications issued to inform the public and relevant stakeholders about food products that have been identified as unsafe for consumption. These alerts are a crucial component of food safety systems worldwide, ensuring that hazardous food products are removed from the market quickly to protect public health. Here’s an overview of what recall alerts entail:</p>
+            
+            <h3>1. Reasons for Food Recalls</h3>
+            <ul>
+                <li><strong>Microbial Contamination:</strong> Presence of harmful bacteria, viruses, or parasites (e.g., Salmonella, Listeria, E. coli).</li>
+                <li><strong>Chemical Contamination:</strong> Presence of harmful chemicals or toxins (e.g., pesticides, heavy metals, mycotoxins).</li>
+                <li><strong>Physical Contamination:</strong> Presence of foreign objects (e.g., glass, metal, plastic).</li>
+                <li><strong>Allergen Mislabeling:</strong> Incorrect labeling or failure to declare allergens (e.g., peanuts, tree nuts, dairy, gluten).</li>
+                <li><strong>Misbranding:</strong> Incorrect or misleading labeling (e.g., false claims, wrong nutritional information).</li>
+                <li><strong>Quality Issues:</strong> Decomposition, spoilage, or other quality defects that make the product unfit for consumption.</li>
+            </ul>
+            
+            <h3>2. Types of Recalls</h3>
+            <ul>
+                <li><strong>Class I Recall:</strong> A situation where there is a reasonable probability that the use of the product will cause serious adverse health consequences or death.</li>
+                <li><strong>Class II Recall:</strong> A situation where the use of the product may cause temporary or medically reversible adverse health consequences or where the probability of serious adverse health consequences is remote.</li>
+                <li><strong>Class III Recall:</strong> A situation where the use of the product is not likely to cause adverse health consequences.</li>
+            </ul>
+
+            <h3>3. Process of Issuing a Recall</h3>
+            <p>The process of issuing a food recall typically involves several steps:</p>
+            <ul>
+                <li><strong>Identification:</strong> Detection of a problem through testing, consumer complaints, or routine inspections.</li>
+                <li><strong>Investigation:</strong> Determining the source and scope of the problem, including identifying affected products and batches.</li>
+                <li><strong>Notification:</strong> Informing regulatory authorities, distributors, retailers, and the public about the recall. This may involve press releases, social media announcements, and direct notifications to consumers.</li>
+                <li><strong>Removal:</strong> Ensuring that the affected products are removed from shelves and distribution channels.</li>
+                <li><strong>Correction:</strong> Addressing the root cause of the problem to prevent future occurrences, such as improving manufacturing practices, changing suppliers, or updating labeling.</li>
+                <li><strong>Follow-up:</strong> Monitoring the effectiveness of the recall and ensuring that all affected products have been successfully removed and destroyed or returned.</li>
+            </ul>
+
+            <h3 id="regulatory">4. Regulatory Agencies and Recall Alerts</h3>
+            <p>Different countries have specific regulatory agencies responsible for overseeing food recalls and issuing alerts. Some of the key agencies include:</p>
+            <ul>
+                <li><strong>United States:</strong> The Food and Drug Administration (FDA) and the United States Department of Agriculture (USDA).</li>
+                <li><strong>European Union:</strong> The European Food Safety Authority (EFSA) and national food safety authorities.</li>
+                <li><strong>Canada:</strong> The Canadian Food Inspection Agency (CFIA).</li>
+                <li><strong>Australia and New Zealand:</strong> Food Standards Australia New Zealand (FSANZ).</li>
+            </ul>
+
+            <h3 id="handling">5. Communication and Public Awareness</h3>
+            <p>Effective communication is crucial for ensuring that recall alerts reach the public and other stakeholders. This can involve:</p>
+            <ul>
+                <li><strong>Press Releases:</strong> Official announcements detailing the recall and instructions for consumers.</li>
+                <li><strong>Websites:</strong> Dedicated sections on regulatory agencies' websites listing current and past recalls.</li>
+                <li><strong>Social Media:</strong> Using platforms like Twitter, Facebook, and Instagram to quickly disseminate information.</li>
+                <li><strong>Email Alerts:</strong> Subscription-based email alerts for consumers and businesses.</li>
+                <li><strong>Retailer Notifications:</strong> Direct notifications to retailers to pull affected products from shelves and inform customers.</li>
+            </ul>
+
+            <h3 id="resources">6. Consumer Actions</h3>
+            <p>When a recall alert is issued, consumers are typically advised to:</p>
+            <ul>
+                <li><strong>Check Products:</strong> Verify if they have purchased the affected product by checking lot numbers, expiration dates, and other identifying information.</li>
+                <li><strong>Dispose of Products:</strong> Safely dispose of the affected product according to the instructions provided in the recall alert.</li>
+                <li><strong>Seek Refunds or Replacements:</strong> Contact the retailer or manufacturer for a refund or replacement if applicable.</li>
+                <li><strong>Monitor Health:</strong> Be aware of any symptoms if the recalled product has been consumed, and seek medical attention if necessary.</li>
+            </ul>
+
+            <h2 id="recent">Example of a Recent Food Recall</h2>
+            <p><strong>Title:</strong> Company XYZ Recalls ABC Product Due to Potential Salmonella Contamination</p>
+            <p><strong>Date Issued:</strong> June 25, 2024</p>
+            <p><strong>Product Details:</strong></p>
+            <ul>
+                <li><strong>Brand:</strong> ABC</li>
+                <li><strong>Product:</strong> XYZ Product</li>
+                <li><strong>Lot Number:</strong> 12345</li>
+                <li><strong>Expiration Date:</strong> 12/31/2024</li>
+            </ul>
+            <p>For more details, visit the FDA recall page: <a href="https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts" target="_blank">FDA Recall Information</a></p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Food Safety Portal. All Rights Reserved.
+    </footer>
+</body>
+</html>

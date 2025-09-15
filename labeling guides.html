@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Flip text on img hover</title>
+   <style>
+    body {
+    background-color: rgba(236, 202, 156, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    border: 0;
+}
+div {
+    background-color: rgba(219, 169, 121, 0.3);
+    width: 100%; 
+    border: 0;  
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(219, 169, 121, 0.3); 
+    color:black;
+}
+        strong{
+            font-size:28px;
+            color:brown;
+        }
+        p{
+            font-size: 25px;
+            padding-left: 20px;
+        }
+       .container {
+           border: 5px solid black;
+           width: 350px;
+           height: 350px;
+           margin: 30px;
+           box-shadow: 0 5px 10px black;
+           position: relative;
+           border-radius: 20px;
+           overflow: hidden;
+       }
+       .container img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+           transition: all 0.5s;
+       }
+       .container:hover img {
+           transform: scale(1.2);
+       }
+       .content {
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           text-align: center;
+           color: whitesmoke;
+           font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+           background-color: rgba(0, 0, 0, 0.5);
+           padding: 10px;
+           box-sizing: border-box;
+           transform: perspective(400px) rotateY(90deg);
+           transform-origin: left;
+           transition: all 0.5s;
+           opacity: 0;
+           pointer-events: none;
+       }
+       .container:hover .content {
+           transform: perspective(400px) rotateY(0deg);
+           opacity: 1;
+           pointer-events: auto;
+       }
+       footer {
+            background-color: #DBA979;
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+            width: 100%;
+            margin-top: auto;
+        }
+   </style>
+</head>
+<body>
+    <div><h1>Labeling Guides</h1></div>
+    <p>Labeling guides for food safety are crucial for ensuring consumers are informed about the products they purchase. Here are some key elements typically included in labeling guides:<br><br>
+    <strong>Nutritional Information:</strong>This includes details such as serving size, calories, fat content, cholesterol, sodium, carbohydrates, protein, vitamins, and minerals.<br><br>
+    <strong>Ingredients List:</strong>All ingredients used in the product, listed in descending order by weight.<br><br>
+    <strong>Allergen Information:</strong>Clearly identifying any major allergens present in the product, such as milk, eggs, peanuts, tree nuts, fish, shellfish, soy, and wheat.<br><br>
+    <strong>Date Marking:</strong>Indicating the date of production or packaging, and if applicable, a "use by" or "best before" date.<br><br>
+    <strong>Country of Origin:</strong>Where the product was manufactured or produced.<br><br>
+    <strong>Instructions for Safe Handling:</strong>Especially important for perishable products, including storage and preparation instructions.<br><br>
+    <strong>Labeling Claims:</strong>Any health claims, organic certification, or other marketing claims should be accurate and comply with regulatory standards.<br><br>
+    <strong>Barcode and Batch Code:</strong>Used for traceability and product identification.<br><br>
+    <strong>Net Quantity:</strong>Amount of product contained in the package, typically in weight or volume.<br><br>
+    <strong>Contact Information:</strong>Manufacturer or distributor contact details for consumer inquiries or feedback.<br>
+    <p>In essence, labeling guidelines serve as a bridge between food producers and consumers, fostering transparency, trust, and safety in the food supply chain. Compliance with these guidelines is essential for promoting public health and ensuring fair practices in the food industry.</p></p><br>
+   <div class="container">
+       <img src="img/13.avif" alt="pic-13">
+       <div class="content">
+           <ul>
+               <li>Masala Chickpea Salad</li>
+           </ul>
+           <ul>
+               <li>Nutritional Information: "Per serving: Calories 180, Total Fat 5g, Sodium 250mg, Total Carbohydrate 28g, Protein 8g"</li>
+               <li>Ingredients: Chickpeas, cucumber, tomato, red onion, cilantro, lemon juice, chaat masala</li>
+               <li>Allergen Information: None</li>
+           </ul>
+       </div>
+   </div>
+   <div class="container">
+       <img src="img/14.avif" alt="pic-14">
+       <div class="content">
+           <ul>
+               <li>Tandoori Chicken Wrap</li>
+           </ul>
+           <ul>
+               <li>Nutritional Information:  "Per serving: Calories 300, Total Fat 10g, Sodium 480mg, Total Carbohydrate 35g, Protein 20g"</li>
+               <li>Ingredients:Tandoori chicken, whole wheat wrap, lettuce, cucumber, yogurt sauce </li>
+               <li>Allergen Information:Contains: Wheat, Milk </li>
+           </ul>
+       </div>
+   </div>
+   <div class="container">
+       <img src="img/15.webp" alt="pic-15">
+       <div class="content">
+           <ul>
+               <li>Vegetable Biryani</li>
+           </ul>
+           <ul>
+               <li>Nutritional Information:"Per serving: Calories 250, Total Fat 8g, Sodium 450mg, Total Carbohydrate 40g, Protein 6g" </li>
+               <li>Ingredients: Basmati rice, mixed vegetables (carrots, peas, bell peppers), spices, nuts </li>
+               <li>Allergen Information: Nuts </li>
+           </ul>
+       </div>
+   </div>
+   <div class="container">
+    <img src="img/16.webp" alt="pic-16">
+    <div class="content">
+        <ul>
+            <li>Paneer Tikka Skewers</li>
+        </ul>
+        <ul>
+            <li>Net Weight: 300g </li>
+            <li>Storage Instructions: Keep frozen at -18°C or below. </li>
+            <li>Country of Origin: Product of India </li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <img src="img/17.avif" alt="pic-17">
+    <div class="content">
+        <ul>
+            <li>Dal Tadka</li>
+        </ul>
+        <ul>
+            <li>Nutritional Information:"Per serving: Calories 200, Total Fat 6g, Sodium 300mg, Total Carbohydrate 30g, Protein 10g"</li>
+            <li>Ingredients:Yellow lentils (moong dal), tomatoes, onions, garlic, spices </li>
+            <li>Allergen Information:None </li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <img src="img/18.webp" alt="pic-18">
+    <div class="content">
+        <ul>
+            <li>Palak Paneer</li>
+        </ul>
+        <ul>
+            <li>Nutritional Information: "Per serving: Calories 220, Total Fat 12g, Sodium 380mg, Total Carbohydrate 20g, Protein 12g" </li>
+            <li>Ingredients:Spinach, paneer (Indian cottage cheese), tomatoes, onions, spices </li>
+            <li>Allergen Information:Milk </li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <img src="img/19.webp" alt="pic-19">
+    <div class="content">
+        <ul>
+            <li>Sprouted Moong Salad</li>
+        </ul>
+        <ul>
+            <li>Nutritional Information:"Per serving: Calories 150, Total Fat 3g, Sodium 100mg, Total Carbohydrate 25g, Protein 8g" </li>
+            <li>Ingredients:  Sprouted moong beans, cucumber, tomato, lemon juice, chaat masala</li>
+            <li>Allergen Information: None</li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <img src="img/20.webp" alt="pic-20">
+    <div class="content">
+        <ul>
+            <li>Whole Wheat Roti</li>
+        </ul>
+        <ul>
+            <li>Net Weight: 200g (10 pieces)</li>
+            <li>Storage Instructions: Store in a cool, dry place.</li>
+            <li>Country of Origin: Product of India</li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <img src="img/21.avif" alt="pic-21">
+    <div class="content">
+        <ul>
+            <li>Rajma (Kidney Bean Curry)</li>
+        </ul>
+        <ul>
+            <li>Nutritional Information:  "Per serving: Calories 280, Total Fat 10g, Sodium 400mg, Total Carbohydrate 40g, Protein 12g"</li>
+            <li>Ingredients:Red kidney beans, tomatoes, onions, garlic, ginger, spices</li>
+            <li>Allergen Information: None</li>
+        </ul>
+    </div>
+</div>
+<footer>
+    &copy; 2024 Food Safety Portal. All Rights Reserved.
+</footer>
+</body>
+</html>

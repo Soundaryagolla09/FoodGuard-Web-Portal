@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Food Safety Portal</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color:rgba(236, 202, 156, 0.5);
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #DBA979;
+    color:black;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8em;
+}
+h2{
+    color: #b86619;
+}
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+section form {
+    margin-bottom: 10px;
+}
+
+section label {
+    display: block;
+}
+
+section input[type="text"],
+section input[type="email"],
+section textarea,
+section button {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #eb9748;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+section button {
+    background-color: #DBA979;
+    color: #fff
+}
+footer{
+    background-color: #DBA979;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us - Food Safety Portal</h1>
+    </header>
+
+    <main>
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <p>If you have any questions, concerns, or feedback, please fill out the form below to contact us.</p>
+            <form id="contact_form" action="submit_contact.php" method="post">
+                <div class="form-group">
+                    <label for="name">Your Name:</label><br>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject:</label><br>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="5" cols="50" required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Food Safety Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

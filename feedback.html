@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form - Food Safety Portal</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color:rgba(236, 202, 156, 0.5);
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #DBA979;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8em;
+}
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom:1px;
+    font-size: 22px;
+}
+
+input[type="text"],input[type="email"],textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: #eb9748 2px solid ;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #DBA979;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #555;
+}
+footer {
+    background-color: #DBA979;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Feedback Form - Food Safety Portal</h1>
+    </header>
+
+    <main>
+        <form id="feedback_form" action="submit_feedback.php" method="post">
+            <div class="form-group">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Feedback:</label><br>
+                <textarea id="feedback" name="feedback" rows="5" cols="50" required></textarea>
+            </div>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Food Safety Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Safety Guidelines</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            width: 100%;
+            border: 0;
+            background-color: rgba(236, 202, 156, 0.5);
+            min-height: 100vh; /* Ensure the body covers the entire viewport height */
+        }
+
+        .container {
+            display: flex;
+            flex: 1; /* Make container stretch to fill remaining height */
+        }
+
+        .sidebar {
+            background-color: #DBA979;
+            width: 370px;
+            text-align: center;
+            height: 210vh; /* Adjust height as needed */
+            padding: 5px;
+            box-shadow: 0 0 10px black;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .sidebar-inner {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            animation: scroll-container 15s linear infinite;
+        }
+
+        .sidebar-inner img {
+            padding: 5px;
+            width: 100%;
+        }
+
+        @keyframes scroll-container {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-40%);
+            }
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 25px;
+            padding-top: 70px;
+        }
+
+        .container1 h1,
+        h2 {
+            text-align: center;
+            border-bottom: 3px solid black;
+        }
+
+        .container1 h1 {
+            border-bottom: 4px solid black;
+        }
+
+        .content {
+            font-size: 28px;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #b86619;
+        }
+
+        h2 {
+            font-size: 40px;
+            color: #b86619;
+        }
+
+        #li-content {
+            color: #b86619;
+            font-size: 35px;
+        }
+
+        ul {
+            font-size: 30px;
+        }
+
+        footer {
+            background-color: #DBA979;
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+            width: 100%;
+            margin-top: auto; /* Push footer to the bottom */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-inner">
+                <img src="images/pic-7.avif" alt="pic-7" height="300" width="300">
+                <img src="images/pic-8.avif" alt="pic-8" height="300" width="300">
+                <img src="images/pic-9.avif" alt="pic-9" height="300" width="300">
+                <img src="images/pic-10.jpg" alt="pic-10" height="300" width="300">
+                <img src="images/pic-11.jpg" alt="pic-11" height="300" width="300">
+                <img src="images/pic-7.avif" alt="pic-7" height="300" width="300">
+                <img src="images/pic-8.avif" alt="pic-8" height="300" width="300">
+                <img src="images/pic-9.avif" alt="pic-9" height="300" width="300">
+                <img src="images/pic-10.jpg" alt="pic-10" height="300" width="300">
+                <img src="images/pic-11.jpg" alt="pic-11" height="300" width="300">
+            </div>
+        </aside>
+        <div class="main-content">
+            <div class="container1">
+                <h1>FOOD SAFETY GUIDELINES</h1><br>
+                <h2>For Food Handlers</h2><br>
+                <ol class="content">
+                    <li id="li-content">Personal Hygiene</li><br>
+                    <ul>
+                        <li>Maintain clean uniforms and aprons.</li>
+                        <li>Use hairnets, gloves, and masks as needed.</li>
+                        <li>Avoid handling food when ill.</li>
+                    </ul><br><br>
+                    <li id="li-content">Hand Washing</li><br>
+                    <ul>
+                        <li>Wash hands thoroughly before starting work and after handling raw food.</li>
+                        <li>Use hand sanitizers only as a supplement to proper handwashing.</li>
+                    </ul><br><br>
+                    <li id="li-content">Cross-Contamination Prevention</li><br>
+                    <ul>
+                        <li>Use separate equipment and utensils for different types of food.</li>
+                        <li>Clean and sanitize surfaces and equipment after each use.</li>
+                        <li>Store chemicals and cleaning agents away from food areas.</li>
+                    </ul><br><br>
+                    <li id="li-content">Temperature Control</li><br>
+                    <ul>
+                        <li>Monitor food temperatures regularly.</li>
+                        <li>Use calibrated thermometers to check food temperatures.</li>
+                        <li>Keep cold food at 40°F or below and hot food at 140°F or above.</li>
+                    </ul><br><br>
+                    <li id="li-content">Cleaning and Sanitizing</li><br>
+                    <ul>
+                        <li>Follow a regular schedule for cleaning and sanitizing all surfaces.</li>
+                        <li>Use appropriate cleaning agents and follow manufacturer's instructions.</li>
+                        <li>Ensure all equipment and utensils are properly sanitized before use.</li>
+                    </ul><br><br>
+                    <li id="li-content">Receiving and Storing Supplies</li><br>
+                    <ul>
+                        <li>Inspect deliveries for signs of contamination or damage.</li>
+                        <li>Store supplies in a clean, dry place, off the floor, and away from walls.</li>
+                        <li>Rotate stock using the FIFO (First In, First Out) method.</li>
+                    </ul><br>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Food Safety Portal. All Rights Reserved.
+    </footer>
+</body>
+</html>
